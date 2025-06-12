@@ -329,11 +329,13 @@ footer {
     border-radius: 20px;
     cursor: default;
     user-select: none;
-    transform: background-color 0.3s eae;
+    transform: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .tag:hover {
     background-color: #e89a9a;
+    transform: scale(1.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .post:hover {
@@ -464,4 +466,14 @@ nav a, button {
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+img {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
