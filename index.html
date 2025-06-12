@@ -8,24 +8,15 @@
         <link rel="stylesheet" href="styles.css" />
         <link href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Open+Sans&display=swap" rel="stylesheet">
     </head>
-    <!--scroll/fade-in effect-->
-    <script>
-        window.addEventListener('scroll', () => {
-            document.querySelectorAll('.post').forEach(post => {
-                const rect = post.getBoundingClientRect();
-                if (rect.top < window,innerHeight - 100) {
-                    post.classList.add('visible');
-                }
-            })
-        });
-    </script>
+    <script src="script.js"></script>
     <!--actual webpage-->
     <body>
         <header>
-            <h1>Between the Lines</h1>
-            <nav>
-                <a href="index.html">Home</a>
+            <div class="site-title"><h1>Between the Lines</h1></div>
+            <nav class="main-nav">
+                <a href="index.html" class="active">Home</a>
                 <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
             </nav>
         </header>
         <!--intro to the blog-->
@@ -38,14 +29,20 @@
             <!--romeo and juliet-->
             <section class="post">
                 <h2>Romeo and Juliet</h2>
-                <p class="date">Posted June #, 2025</p>
+                <p class="meta">Posted June #, 2025 &nbsp; | &nbsp; By: Jacques Jacob</p>
                 <img src="images/Juliet's Balcony.jpg" alt="Juliet's Balcony" class="post-thumb"/>
+                <div class="tags">
+                    <span class="tag">Shakespeare</span>
+                    <span class="tag">Tragedy</span>
+                    <span class="tag">Love</span>
+                    <span class="tag">Drama</span>
+                </div>
                 <div class="post-content">
                     <p>
-                        yap yap yap
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus repellat asperiores sunt cum saepe! Veniam dolorem quaerat magnam vero debitis ad animi quis, velit doloribus dicta qui natus fugiat, dolore iste quae in ex illum, maxime architecto ullam? Unde beatae cum libero voluptatem esse molestias doloremque expedita inventore fugiat, autem ducimus commodi, explicabo facilis. Fugit aut fugiat, libero rem omnis blanditiis repudiandae doloribus sapiente architecto magnam possimus commodi error minus at nostrum eum debitis iste tempore dolores harum iure sunt enim! Quas cum totam dolore, cupiditate, unde tenetur quia neque tempora alias quod in animi! In rem magnam dolores quos sapiente sunt optio modi culpa eum labore soluta quo quam sed, nobis animi exercitationem, harum pariatur eligendi recusandae ex et, ratione cumque iure. Beatae qui optio commodi minima ut facere magnam voluptas tempora nulla dolore odit suscipit atque quisquam harum numquam labore, omnis repellendus, officiis ab, quis alias deserunt. Repudiandae adipisci nemo animi quam possimus? Quis magni recusandae ad provident quia iure molestiae facere modi delectus enim saepe laborum minus quas vel omnis pariatur quibusdam nesciunt mollitia quaerat consectetur, obcaecati praesentium. Architecto, quaerat libero fugit reiciendis sint officia doloribus dolorem cum odio ullam perferendis quod autem aut tempora delectus similique! Rem ullam alias praesentium sapiente laborum? Soluta quam animi voluptatem sint laboriosam earum, eos dolorum quas, deleniti, natus sed impedit. Impedit, minus ducimus. Tempore accusantium nobis, commodi veniam eligendi incidunt recusandae. Quidem molestiae iure quisquam tempora omnis! Nesciunt amet qui odio, aut dolores ullam deleniti aspernatur voluptatem, sint cumque itaque!
                     </p>
                     <p>
-                        more yap yap yap
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt error, laudantium ipsum sapiente soluta ex consequuntur! Deleniti autem corporis voluptates nostrum numquam magni eveniet est omnis dignissimos. Labore temporibus eos unde dolor voluptatem, at aspernatur illum maxime provident placeat autem iusto vitae nostrum accusamus et nobis incidunt error nam harum libero modi voluptate architecto ut. Vitae excepturi qui voluptatem ducimus quaerat. Eos harum animi, quisquam quam voluptatibus ipsa tempore. Distinctio fuga eveniet, nesciunt error cum aperiam fugit perspiciatis nulla pariatur quam dolor, aspernatur at obcaecati quo iusto temporibus saepe! Error ex ducimus distinctio corrupti. Quasi eos ducimus, maxime, corporis minima eum voluptate deserunt delectus expedita ea inventore architecto. Aliquam fugit suscipit, earum quae impedit qui non, harum corrupti rerum aliquid voluptas maxime facere enim id accusantium, assumenda ut quis quaerat consequuntur quia asperiores. Quae praesentium placeat cum ab eius. Error quae, impedit rem quidem voluptatem ipsa non sint dolore iusto repudiandae aliquid laboriosam rerum, iste odio aspernatur nisi porro veritatis. Molestiae qui dolor quae, temporibus nemo tempora cumque necessitatibus amet incidunt velit dolores sed! Amet labore culpa adipisci veniam saepe dicta ipsam facere neque, pariatur aut sapiente enim facilis quas minima natus. Laboriosam molestias esse sit aliquid perspiciatis repellendus ab necessitatibus odit voluptas non voluptate atque incidunt quibusdam, dolores pariatur sapiente. Voluptates alias voluptatibus officiis odit assumenda vero deleniti maxime expedita excepturi maiores numquam totam explicabo, eveniet ratione quos tempora blanditiis impedit tenetur officia eos quidem minima quod obcaecati et. Eveniet nobis libero, odio minima, repellat dolore at accusamus animi quibusdam nulla laboriosam, aliquam rem! Esse voluptate eligendi necessitatibus eveniet placeat asperiores qui inventore rerum ab! Odit, voluptatum voluptatibus? Culpa perspiciatis fugit ipsam repudiandae consequuntur? Fuga possimus dignissimos laborum architecto! Quasi eius, incidunt eum officia similique tenetur distinctio quidem impedit delectus temporibus exercitationem, voluptatem harum asperiores doloremque sunt repellendus quia.
                     </p>
                 </div>
                 <div class="comments">
@@ -57,7 +54,13 @@
             <!--edward scissorhands-->    
             <section class="post">
                 <h2>Edward Scissorhands</h2>
-                <p class="date">Posted June #, 2025</p>
+                <p class="meta">Posted June #, 2025 &nbsp; | &nbsp; By: Jacques Jacob</p>
+                <div class="tags">
+                    <span class="tag">Film</span>
+                    <span class="tag">Tim Burton</span>
+                    <span class="tag">Fantasy</span>
+                    <span class="tag">Love</span>
+                </div>
                 <p>
                     yap yap yap
                 </p>
@@ -73,7 +76,13 @@
             <!--comparison-->
             <section class="post">
                 <h2>Comparison</h2>
-                <p class="date">Posted June #, 2025</p>
+                <p class="meta">Posted June #, 2025 &nbsp; | &nbsp; By: Jacques Jacob</p>
+                <div class="tags">
+                    <span class="tag">Literary Analysis</span>
+                    <span class="tag">Themes</span>
+                    <span class="tag">Symbolism</span>
+                    <span class="tag">Chracter Study</span>
+                </div>
                 <p>
                     yap yap yap
                 </p>
@@ -89,7 +98,17 @@
         </main>
         <!--footer-->
         <footer>
-            <p>&copy; 2025 Between the Lines - Coded by: Jacques Jacob</p>
+            <div class="footer-content">
+                <nav class="footer-nav">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="#" aria-label="Linkedin" title="Linkedin">Linkedin</a>
+                    <a href="#" aria-label="Twitter" title="Twitter">Twitter</a>
+                    <a href="#" aria-label="Instagram" title="Instagram">Instagram</a>
+                    <p>&copy; 2025 Between the Lines - Coded by: Jacques Jacob</p>
+                </nav>
+            </div>
         </footer>
     </body>
 </html>

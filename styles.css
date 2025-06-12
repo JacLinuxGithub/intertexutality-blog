@@ -3,15 +3,50 @@ body {
     margin: 0;
     padding: 0;
     background: #f5f2ed;
-    color:  #2e2e2e
+    color:  #2e2e2e;
+    line-height: 1.6;
+    font-size: 1rem;
 }
 
 header {
-    background: #522b47;
+    background: linear-gradient(135deg, #522b47 0%, #7a3e6e 100%);
     color: #fff;
     padding: 20px 0;
     text-align: center;
-    line-height: 1.5;
+    line-height: 1.65;
+    position: sticky;
+    top: 0;
+    transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1), padding 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+}
+
+.main-nav {
+    transition: opacity 0.5s ease;
+    max-height: 200px;
+    overflow: hidden;
+}
+
+header.scrolled .main-nav {
+    opacity: 0;
+    pointer-events: none;
+    max-height: 0;
+}
+
+header.scrolled .site-title {
+    font-size: 1.8em;
+}
+
+.main-nav a {
+    color: #ffcccb;
+    text-decoration: none;
+    margin: 0 30px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #fff;
+    text-decoration: underline;
 }
 
 header h1 {
@@ -24,18 +59,6 @@ nav {
     margin-top: 10px;
 }
 
-nav a {
-    color: #ffcccb;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #fff;
-    text-decoration: underline;
-}
-
 nav a.active {
     color: #ffcccb;
     text-decoration: underline;
@@ -44,22 +67,23 @@ nav a.active {
 main {
     padding: 40px 20px;
     max-width: 1000px;
-    margin: auto;
-    line-height: 1.5;
+    margin: 0 auto;
+    line-height: 1.65;
+    width: 90%;
 }
 
 h2, h3 {
     font-family: 'PT Serif', serif;
     color: #3b1e2e;
     margin-top: 0.2em;
+    letter-spacing: 0.03em;
 }
 
 .intro {
     margin-bottom: 40px;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5px;
-    align-items: center;
+    gap: 10px;
     justify-content: center;
 }
 
@@ -87,10 +111,11 @@ ul li a {
 
 footer {
     text-align: center;
-    background: #3b1e2e;
+    background: linear-gradient(135deg, #3b1e2e 0%, #5d3450 100%);
     color: #eee;
-    padding: 20px 0;
+    padding: 30px 20px;
     margin-top: 60px;
+    font-family: 'Open Sans', serif;
 }
 
 .post {
@@ -101,19 +126,12 @@ footer {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .post.visible {
     opacity: 1;
     transform: translateY(0);
-}
-
-.post .date {
-    font-style: italic;
-    font-size: 0.9em;
-    color: #666;
-    margin-bottom: 5px;
 }
 
 .comments {
@@ -128,14 +146,21 @@ footer {
     color: #444;
 }
 
+.comment strong {
+    color: #7a3e6e;
+}
+
 .post-image {
     max-width: 100%;
     height: auto;
-    border-radius: 6px;
+    display: block;
+    border-radius: 10px;
+    padding: 5px;
     margin: 15px 0;
+    background-color: #fff;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
     header h1 {
         font-size: 1.8em;
     }
@@ -163,6 +188,10 @@ footer {
         width: 100%;
         max-width: 300px;
     }
+
+    h1 {
+        font-size: 3rem;
+    }
 }
 
 .post-thumb {
@@ -182,4 +211,190 @@ footer {
     content: "";
     display: table;
     clear: both;
+}
+
+.meta {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.contact-form {
+    background-color: #fcf8f5;
+    border-radius: 12px;
+    padding: 40px 30px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    color: #3b1e2e;
+    font-size: 1em;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: #522b47;
+    color: #fff;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-form button:hover {
+    background-color: #3b1e2e;
+}
+
+.contact-intro {
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    text-align: center;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-intro h2 {
+    font-family: 'PT Serif', serif;
+    color: #3b1e2e;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.contact-intro p {
+    font-size: 1em;
+    color: #444;
+    line-height: 1.6;
+    margin: 0 auto;
+}
+
+.contact-intro, .contact-form {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.contact-intro.visible, .contact-form.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+nav a {
+    position: relative;
+    padding: 0 12px;
+    font-weight: bold;
+    color: #ffcccb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #ffcccb;
+    transition: width 0.4s ease;
+}
+
+nav a:hover::after, nav a.active::after {
+    width: 100%;
+}
+
+.tags {
+    margin-bottom: 15px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #a14b5a;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.85em;
+    padding: 5px 12px;
+    margin-right: 8px;
+    border-radius: 20px;
+    cursor: default;
+    user-select: none;
+    transform: background-color 0.3s eae;
+}
+
+.tag:hover {
+    background-color: #e89a9a;
+}
+
+.post:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+a {
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #a14b5a;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+nav a, button {
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+.read-time {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #666;
+    margin: 5px 0 15px 0;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.footer-nav a {
+    color: #ffcccb;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-nav a:hover {
+    text-decoration: none;
 }

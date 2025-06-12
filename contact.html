@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Between the Lines</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<script>
+    function revealSections() {
+        document.querySelectorAll('.contact-intro, .contact-form').forEach(section => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) {
+                section.classList.add('visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', revealSections);
+    window.addEventListener('load', revealSections);
+</script>
+<body>
+    <header>
+        <h1>Between the Lines</h1>
+        <nav>
+             <a href="index.html">Home</a>
+             <a href="about.html">About</a>
+              <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>   
+
+    <main>
+        <section class="intro">
+            <h2>Contact Me!</h2>
+            <p>If you'd like to get in touch, whether it's feedback on the blog or a recommendation, feel free to send me a message below. I'd love to hear from you!</p>
+        </section>
+        <section class="contact-form">
+            <form action="#" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+
+                <label for="message">Message:</label>
+                <textarea name="message" id="message" rows="6" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="#" aria-label="Linkedin" title="Linkedin">Linkedin</a>
+                <a href="#" aria-label="Twitter" title="Twitter">Twitter</a>
+                <a href="#" aria-label="Instagram" title="Instagram">Instagram</a>
+                <p>&copy; 2025 Between the Lines - Coded by: Jacques Jacob</p>
+            </nav>
+        </div>
+     </footer>
+</body>
+</html>
