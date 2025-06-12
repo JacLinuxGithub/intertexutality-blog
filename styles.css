@@ -398,3 +398,43 @@ nav a, button {
 .footer-nav a:hover {
     text-decoration: none;
 }
+
+.image-stack figure {
+    margin: 0 0 15px 0;
+}
+
+.image-stack img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+}
+
+.image-stack figcaption {
+    text-align: center;
+    font-size: 0.85em;
+    color: #555;
+    margin-top: 3px;
+}
+
+.post-content {
+    overflow: hidden;
+}
+
+.float-left {
+    float: left;
+    margin-right: 2px;
+    max-width: 300px;
+    padding-right: 30px;
+}
+
+@media screen and (max-width: 700px) {
+  .float-left {
+    float: none;
+    margin: 0 auto 20px auto;
+  }
+
+  .post-content {
+    text-align: justify;
+  }
+}
