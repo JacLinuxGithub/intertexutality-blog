@@ -148,7 +148,7 @@ footer {
 
 .comment {
     font-size: 0.9em;
-    margin-bottom: 12px;
+    margin-bottom: 7.5px;
     color: #444;
 }
 
@@ -476,4 +476,52 @@ img:hover {
 
 img {
     transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.comment.reply {
+    margin-left: 30px;
+    background-color: #f0e8e8;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+
+.reply-form {
+    margin-top: 10px;
+}
+
+.reply-form textarea {
+    width: 100%;
+    min-height: 60px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 8px;
+    font-family: 'Open Sans', sans-serif;
+    resize: vertical;
+}
+
+.reply-form button {
+    margin-top: 5px;
+    background-color: #a14b5a;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.reply-btn {
+    background: none;
+    border: none;
+    color: #a14b5a;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0;
+    margin-top: 0px;
+}
+
+.reply-btn:hover {
+    text-decoration: underline;
 }

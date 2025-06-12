@@ -19,3 +19,14 @@ window.addEventListener('scroll', () => {
 });
 
 window.addEventListener('load', revealPosts);
+
+document.querySelectorAll('.reply-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const replyForm = button.nextElementSibling;
+    if (replyForm.style.display === 'none' || replyForm.style.display === '') {
+      replyForm.style.display = 'block';
+    } else {
+      replyForm.style.display = 'none';
+    }
+  });
+});
