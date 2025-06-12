@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--html backend stuff-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Between the Lines</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Open+Sans&display=swap" rel="stylesheet">
+    </head>
+    <!--scroll/fade-in effect-->
+    <script>
+        window.addEventListener('scroll', () => {
+            document.querySelectorAll('.post').forEach(post => {
+                const rect = post.getBoundingClientRect();
+                if (rect.top < window,innerHeight - 100) {
+                    post.classList.add('visible');
+                }
+            })
+        });
+    </script>
+    <!--actual webpage-->
+    <body>
+        <header>
+            <h1>Between the Lines</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+            </nav>
+        </header>
+        <!--intro to the blog-->
+        <main>
+            <section class="intro">
+                <h2>Welcome to Between the Lines</h2>
+                <p>A literary blog exploring classic and modern text through a personal lens. Dive deep into the emotional, symbolic, and thematic layers of the stories my class has studied over this semester.</p>
+            </section>
+        <!--the posts-->
+            <!--romeo and juliet-->
+            <section class="post">
+                <h2>Romeo and Juliet</h2>
+                <p class="date">Posted June #, 2025</p>
+                <img src="images/Juliet's Balcony.jpg" alt="Juliet's Balcony" class="post-thumb"/>
+                <div class="post-content">
+                    <p>
+                        yap yap yap
+                    </p>
+                    <p>
+                        more yap yap yap
+                    </p>
+                </div>
+                <div class="comments">
+                    <h3>Comments</h3>
+                    <p class="comment"><strong>@litfan99:</strong> I love how you yap yap yap</p>
+                    <p class="comment"><strong>@bookworm101:</strong> I love how you yap yap yap</p>
+                </div>
+            </section>
+            <!--edward scissorhands-->    
+            <section class="post">
+                <h2>Edward Scissorhands</h2>
+                <p class="date">Posted June #, 2025</p>
+                <p>
+                    yap yap yap
+                </p>
+                <p>
+                    more yap yap yap
+                </p>
+                <div class="comments">
+                    <h3>Comments</h3>
+                    <p class="comment"><strong>@litfan99:</strong> I love how you yap yap yap</p>
+                    <p class="comment"><strong>@bookworm101:</strong> I love how you yap yap yap</p>
+                </div>
+            </section>
+            <!--comparison-->
+            <section class="post">
+                <h2>Comparison</h2>
+                <p class="date">Posted June #, 2025</p>
+                <p>
+                    yap yap yap
+                </p>
+                <p>
+                    more yap yap yap
+                </p>
+                <div class="comments">
+                    <h3>Comments</h3>
+                    <p class="comment"><strong>@litfan99:</strong> I love how you yap yap yap</p>
+                    <p class="comment"><strong>@bookworm101:</strong> I love how you yap yap yap</p>
+                </div>
+            </section>
+        </main>
+        <!--footer-->
+        <footer>
+            <p>&copy; 2025 Between the Lines - Coded by: Jacques Jacob</p>
+        </footer>
+    </body>
+</html>
